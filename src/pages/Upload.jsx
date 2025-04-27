@@ -8,7 +8,8 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 
 
-const videoUploadUrl = 'http://localhost:8080/api/v1/video/upload'
+const videoUploadUrl = 'https://youtube-video-uploader-backend.onrender.com/api/v1/video/upload';
+const generateMetaDataUrl = 'https://youtube-video-uploader-backend.onrender.com/api/v1/video/generate-meta-data';
 const Upload = () => {
 
   const { token } = useAuth();
@@ -91,7 +92,7 @@ const Upload = () => {
   const generateMetaData = async () => {
 
 
-    const generateMetaDataUrl = 'http://localhost:8080/api/v1/video/generate-meta-data';
+    // const generateMetaDataUrl = 'http://localhost:8080/api/v1/video/generate-meta-data';
 
     if (data.title.trim() === '') {
       toast.error("Title is required to generate metadata");
